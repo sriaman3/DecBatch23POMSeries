@@ -28,9 +28,9 @@ public class LoginPageTest extends BaseTest{
 	@Test(priority = 4)
 	public void loginTest() {
 		
-		boolean loginStatus = lp.doLogin("augbatch2023@opencart.com", "Selenium@12345");
+		accountPage = lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
-		Assert.assertTrue(loginStatus);
+		 Assert.assertTrue(accountPage.getAccountPageUrl().contains(AppConstants.ACCOUNT_PAGE_URL_FRACTION));
 	}
 
 }

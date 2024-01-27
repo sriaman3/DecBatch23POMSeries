@@ -23,6 +23,8 @@ public class AppConstants {
 	
 	public static final int ACCOUNT_PAGE_HEADERS_COUNT = 4;
 	
+	public static final String ACCOUNT_PAGE_HEADER = "My Account";
+	
 	public static final List<String> ACCOUNT_PAGE_HEADER_LIST = 
 			Arrays.asList("My Account","My Orders","My Affiliate Account","Newsletter");
 	

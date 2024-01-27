@@ -38,11 +38,11 @@ public class LoginPage {
 		return eleUtils.getElement(forgotPass).isDisplayed();
 	}
 	
-	public boolean doLogin(String userName, String pass) {
+	public AccountPage doLogin(String userName, String pass) {
 		eleUtils.waitForVisibilityOfElement(this.userName, AppConstants.SHORT_DEFAULT_WAIT).sendKeys(userName);
 		eleUtils.doSendKeys(this.pass, pass);
 		eleUtils.doClick(loginBtn);
-		return true;
+		return new AccountPage(driver);
 	}
 	
 	public RegisterPage navigateToRegisterPage() {
