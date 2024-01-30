@@ -19,7 +19,7 @@ import org.qa.opencart.exception.FrameworkException;
 
 public class DriverFactory {
 
-	private static WebDriver driver;
+	WebDriver driver;
 	Properties prop;
 	OptionsManager optionsManager;
 	private static final Logger log = LogManager.getLogger(DriverFactory.class);
@@ -81,7 +81,7 @@ public class DriverFactory {
 	/**
 	 * take screenshot
 	 */
-	public static String getScreenshot(String methodName) {
+	public String getScreenshot(String methodName) {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		
 		String path = System.getProperty("user.dir") + "/screenshot/" + methodName + "_" + System.currentTimeMillis()+".png";
