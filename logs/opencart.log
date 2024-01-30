@@ -1,0 +1,4 @@
+2024-01-30 06:33:28 INFO  DriverFactory:36 - Inside the edge browser
+2024-01-30 06:33:32 INFO  DriverFactory:19 - this is testing of login page title
+2024-01-30 06:33:32 INFO  DriverFactory:25 - this is testing of login page URL
+2024-01-30 06:33:32 INFO  DriverFactory:38 - login to the application
