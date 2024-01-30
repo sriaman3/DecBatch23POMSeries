@@ -2,3 +2,16 @@
 2024-01-30 06:33:32 INFO  DriverFactory:19 - this is testing of login page title
 2024-01-30 06:33:32 INFO  DriverFactory:25 - this is testing of login page URL
 2024-01-30 06:33:32 INFO  DriverFactory:38 - login to the application
+2024-01-30 06:50:32 INFO  DriverFactory:40 - Inside the edge browser
+2024-01-30 06:50:36 INFO  DriverFactory:19 - this is testing of login page title
+2024-01-30 06:50:36 INFO  DriverFactory:25 - this is testing of login page URL
+2024-01-30 06:50:36 INFO  DriverFactory:38 - login to the application
+2024-01-30 06:51:32 INFO  DriverFactory:40 - Inside the edge browser
+2024-01-30 06:51:37 INFO  DriverFactory:19 - this is testing of login page title
+2024-01-30 06:51:37 INFO  DriverFactory:25 - this is testing of login page URL
+2024-01-30 06:51:37 INFO  DriverFactory:38 - login to the application
+2024-01-30 06:55:44 INFO  DriverFactory:42 - Inside the edge browser
+2024-01-30 06:59:37 INFO  DriverFactory:40 - Inside the edge browser
+2024-01-30 06:59:37 INFO  DriverFactory:40 - Inside the edge browser
+2024-01-30 06:59:45 INFO  DriverFactory:19 - this is testing of login page title
+2024-01-30 06:59:45 INFO  DriverFactory:25 - this is testing of login page URL

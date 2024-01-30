@@ -1,5 +1,6 @@
 package org.qa.opencart.factory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,15 +8,18 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.qa.opencart.exception.FrameworkException;
 
 public class DriverFactory {
 
-	WebDriver driver;
+	private static WebDriver driver;
 	Properties prop;
 	OptionsManager optionsManager;
 	private static final Logger log = LogManager.getLogger(DriverFactory.class);
@@ -72,6 +76,25 @@ public class DriverFactory {
 		
 		return prop;
 		
+	}
+	
+	/**
+	 * take screenshot
+	 */
+	public static String getScreenshot(String methodName) {
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		
+		String path = System.getProperty("user.dir") + "/screenshot/" + methodName + "_" + System.currentTimeMillis()+".png";
+				
+		File destination = new File(path);
+		
+		try {
+			FileHandler.copy(srcFile, destination);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return path;
 	}
 	
 
